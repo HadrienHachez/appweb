@@ -3,5 +3,22 @@
 <div class="jumbotron text-center">
     <h1> HomeCine </h1>
     <p>dfsfhdkjsfjkds fhdskfhdjskhfjksd </p>
+</div>
+<div class="container">
+    <h2> meilleurs films </h2>
+    <div class="row flex">
+        {% for movie in movies%}
+            <div class="col-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <a href = "{{path('movie.show',{id: movie.id}) }}">{{movie.title}} ({{movie.type}})</a>
+                        </h5>
+                        <div class "text-danger">{{movie.score}}</div>
+                    </div>
+                </div>
+            </div>
+        {%endfor%}
     </div>
+</div>
 {%endblock %}

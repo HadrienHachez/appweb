@@ -2,6 +2,24 @@
 {%block title 'See all movies' %}
 {%block body %}
 <div class="container mt-4">
-    <h1> List of movies </h1>
-    </div>
+    <h1> Editor</h1>
+    <table class="tabe table-striped">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for movie in movies %}
+            <tr>
+                <td>{{movie.title}}</td>
+                <td>
+                    <a href="{{path('movie.edit',{id:movie.id}) }}" class="btn-secondary">Edit</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
 {%endblock %}

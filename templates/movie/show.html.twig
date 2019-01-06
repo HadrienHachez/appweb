@@ -1,0 +1,9 @@
+{%extends 'base.html.twig'%}
+{%block title 'See all movies' %}
+{%block body %}
+<div class="container mt-4">
+    <h1> {{movie.title}} ({{movie.score}}/10)</h1>
+    <h3>{{movie.type}}, date?</h3>
+    <p> {{movie.synopsis}}</p>
+    </div>
+{%endblock %}
